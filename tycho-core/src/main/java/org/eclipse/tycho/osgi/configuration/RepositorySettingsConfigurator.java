@@ -67,11 +67,17 @@ public class RepositorySettingsConfigurator extends EquinoxLifecycleListener {
 
             ArtifactRepository locationAsMavenRepository = repositorySystem.createArtifactRepository(location.getId(),
                     location.getURL().toString(), p2layout, P2_REPOSITORY_POLICY, P2_REPOSITORY_POLICY);
-            Mirror mirror = mirrorSelector.getMirror(locationAsMavenRepository,
-                    context.getSession().getRequest().getMirrors());
+            try {
+                if (mirrorSelector != null) {
+                    Mirror mirror = mirrorSelector.getMirror(locationAsMavenRepository,
+                            context.getSession().getRequest().getMirrors());
 
-            if (mirror != null) {
-                return new MavenRepositoryLocation(mirror.getId(), URI.create(mirror.getUrl()));
+                    if (mirror != null) {
+                        return new MavenRepositoryLocation(mirror.getId(), URI.create(mirror.getUrl()));
+                    }
+                }
+            } catch (NullPointerException ex) {
+                // No mirror found
             }
             return null;
         }
