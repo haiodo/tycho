@@ -42,6 +42,7 @@
 		<downloaded>${project.build.directory}/repository/plugins/</downloaded>
 		<!-- don't deploy this helper pom -->
 		<maven.deploy.skip>true</maven.deploy.skip>
+		<deploy.loc>file://${project.build.directory}/../../repository</deploy.loc>
 	</properties>
 
 	<build>
@@ -208,6 +209,7 @@
 								</goals>
 								<configuration>
 									<file>${downloaded}/org.eclipse.osgi_${equinoxVersion}.jar</file>
+									<url>${deploy.loc}</url>
 									<sources>${downloaded}/org.eclipse.osgi.source_${equinoxVersion}.jar</sources>
 									<pomFile>${project.build.outputDirectory}/org.eclipse.osgi.pom</pomFile>
 								</configuration>
@@ -220,6 +222,7 @@
 								</goals>
 								<configuration>
 									<file>${downloaded}/org.eclipse.osgi.compatibility.state_${equinoxCompatVersion}.jar</file>
+									<url>${deploy.loc}</url>
 									<sources>${downloaded}/org.eclipse.osgi.compatibility.state.source_${equinoxCompatVersion}.jar</sources>
 									<pomFile>${project.build.outputDirectory}/org.eclipse.osgi.compatibility.state.pom</pomFile>
 								</configuration>

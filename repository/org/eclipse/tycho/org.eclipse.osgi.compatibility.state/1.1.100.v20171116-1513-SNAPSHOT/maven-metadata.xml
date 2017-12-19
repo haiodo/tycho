@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>org.eclipse.tycho</groupId>
+  <artifactId>org.eclipse.osgi.compatibility.state</artifactId>
+  <version>1.1.100.v20171116-1513-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20171219.103136</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20171219103136</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.1.100.v20171116-1513-20171219.103136-1</value>
+        <updated>20171219103136</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1.100.v20171116-1513-20171219.103136-1</value>
+        <updated>20171219103136</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <classifier>sources</classifier>
+        <extension>jar</extension>
+        <value>1.1.100.v20171116-1513-20171219.103136-1</value>
+        <updated>20171219103136</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
