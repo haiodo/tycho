@@ -34,7 +34,7 @@ import org.eclipse.tycho.locking.facade.FileLocker;
 public class DefaultBundleReader extends AbstractLogEnabled implements BundleReader {
 
     public static final String CACHE_PATH = ".cache/tycho";
-    private final LRUCache<String, OsgiManifest> manifestCache = new LRUCache<>(50);
+    private final LRUCache<String, OsgiManifest> manifestCache = new LRUCache<>(2000);
 
     private File cacheDir;
     private Set<String> extractedFiles = new HashSet<>();
@@ -61,8 +61,8 @@ public class DefaultBundleReader extends AbstractLogEnabled implements BundleRea
                 return loadManifestFromFile(bundleLocation);
             } else {
                 // file does not exist
-                throw new OsgiManifestParserException(
-                        new File(bundleLocation, JarFile.MANIFEST_NAME).getAbsolutePath(), "Manifest file not found");
+                throw new OsgiManifestParserException(new File(bundleLocation, JarFile.MANIFEST_NAME).getAbsolutePath(),
+                        "Manifest file not found");
             }
         } catch (IOException e) {
             throw new OsgiManifestParserException(bundleLocation.getAbsolutePath(), e);

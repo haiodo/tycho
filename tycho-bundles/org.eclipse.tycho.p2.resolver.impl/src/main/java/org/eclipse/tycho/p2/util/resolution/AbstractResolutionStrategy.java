@@ -47,6 +47,10 @@ public abstract class AbstractResolutionStrategy {
         Set<IInstallableUnit> result = new LinkedHashSet<>();
 
         for (TargetEnvironment environment : environments) {
+            if (environment.getArch() != null) {
+                System.out.println(
+                        "Resolve environment:  " + environment.getOs() + environment.getWs() + environment.getArch());
+            }
             result.addAll(resolve(getEffectiveFilterProperties(environment), monitor));
         }
 

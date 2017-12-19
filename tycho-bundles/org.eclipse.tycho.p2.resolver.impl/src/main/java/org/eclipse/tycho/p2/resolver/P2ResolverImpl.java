@@ -13,6 +13,7 @@ package org.eclipse.tycho.p2.resolver;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -22,6 +23,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.equinox.p2.metadata.IArtifactKey;
@@ -108,17 +112,63 @@ public class P2ResolverImpl implements P2Resolver {
             addDependenciesForTests();
         }
 
-        ArrayList<P2ResolutionResult> results = new ArrayList<>();
+        P2ResolutionResult[] results = new P2ResolutionResult[environments.size()];
         usedTargetPlatformUnits = new LinkedHashSet<>();
 
-        for (TargetEnvironment environment : environments) {
-            results.add(resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment));
+        long st = System.currentTimeMillis();
+
+        boolean useAsync = environments.size() > 1;
+
+        List<CompletableFuture<Void>> futures = new ArrayList<>();
+        List<RuntimeException> exceptions = new ArrayList<>();
+        AtomicLong totalTime = new AtomicLong(0);
+        for (int i = 0; i < environments.size(); i++) {
+            TargetEnvironment environment = environments.get(i);
+            if (useAsync) {
+                final int fi = i;
+                futures.add(CompletableFuture.runAsync(() -> {
+                    long sts = System.currentTimeMillis();
+                    for (int retry = 0; retry < 5; retry++) {
+                        try {
+                            resolveStep(project, results, environment, fi);
+                            break;
+                        } catch (RuntimeException ex) {
+                            exceptions.add(ex);
+                        }
+                    }
+                    long ed = System.currentTimeMillis();
+                    totalTime.addAndGet(ed - st);
+                }));
+            } else {
+                resolveStep(project, results, environment, i);
+            }
+        }
+        if (useAsync) {
+            try {
+                CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).get();
+            } catch (InterruptedException | ExecutionException e) {
+                // Ignore
+            }
+        }
+        long ed = System.currentTimeMillis();
+        logger.info("Resolve time: " + (ed - st) + " Total time:" + totalTime.get());
+
+        if (exceptions.size() > 0) {
+            throw exceptions.get(0);
         }
 
         context.reportUsedLocalIUs(usedTargetPlatformUnits);
         usedTargetPlatformUnits = null;
 
-        return results;
+        return Arrays.asList(results);
+    }
+
+    private void resolveStep(ReactorProject project, P2ResolutionResult[] results, TargetEnvironment environment,
+            int i) {
+        P2ResolutionResult result = resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment);
+        synchronized (results) {
+            results[i] = result;
+        }
     }
 
     @Override
@@ -213,20 +263,23 @@ public class P2ResolverImpl implements P2Resolver {
         DefaultP2ResolutionResult result = new DefaultP2ResolutionResult();
         Set<String> missingArtifacts = new TreeSet<>();
 
-        for (IInstallableUnit iu : newState) {
-            addUnit(result, iu, currentProject, missingArtifacts);
+        synchronized (context) {
+            for (IInstallableUnit iu : newState) {
+                addUnit(result, iu, currentProject, missingArtifacts);
+            }
+            // remove entries for which there were only "additional" IUs, but none with a recognized type
+            result.removeEntriesWithUnknownType();
+
+            // local repository index needs to be saved manually
+
+            context.saveLocalMavenRepository();
+
+            failIfArtifactsMissing(missingArtifacts);
+
+            // TODO 372780 remove; no longer needed when aggregation uses frozen target platform as source
+            collectNonReactorIUs(result, newState);
+            return result;
         }
-        // remove entries for which there were only "additional" IUs, but none with a recognized type
-        result.removeEntriesWithUnknownType();
-
-        // local repository index needs to be saved manually
-        context.saveLocalMavenRepository();
-
-        failIfArtifactsMissing(missingArtifacts);
-
-        // TODO 372780 remove; no longer needed when aggregation uses frozen target platform as source
-        collectNonReactorIUs(result, newState);
-        return result;
     }
 
     private void addUnit(DefaultP2ResolutionResult result, IInstallableUnit iu, ReactorProject currentProject,
