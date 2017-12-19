@@ -5,32 +5,32 @@
   <version>1.1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20171219.105109</timestamp>
+      <timestamp>20171219.113005</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20171219105109</lastUpdated>
+    <lastUpdated>20171219113005</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>zip</extension>
-        <value>1.1.0-20171219.105109-1</value>
-        <updated>20171219105109</updated>
+        <value>1.1.0-20171219.113005-1</value>
+        <updated>20171219113005</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1.0-20171219.105109-1</value>
-        <updated>20171219105109</updated>
+        <value>1.1.0-20171219.113005-1</value>
+        <updated>20171219113005</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2metadata</classifier>
         <extension>xml</extension>
-        <value>1.1.0-20171219.105109-1</value>
-        <updated>20171219105109</updated>
+        <value>1.1.0-20171219.113005-1</value>
+        <updated>20171219113005</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2artifacts</classifier>
         <extension>xml</extension>
-        <value>1.1.0-20171219.105109-1</value>
-        <updated>20171219105109</updated>
+        <value>1.1.0-20171219.113005-1</value>
+        <updated>20171219113005</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

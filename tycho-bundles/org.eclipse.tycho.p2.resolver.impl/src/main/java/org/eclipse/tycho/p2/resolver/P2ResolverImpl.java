@@ -133,7 +133,9 @@ public class P2ResolverImpl implements P2Resolver {
                             resolveStep(project, results, environment, fi);
                             break;
                         } catch (RuntimeException ex) {
-                            exceptions.add(ex);
+                            synchronized (exceptions) {
+                                exceptions.add(ex);
+                            }
                         }
                     }
                     long ed = System.currentTimeMillis();
@@ -154,7 +156,13 @@ public class P2ResolverImpl implements P2Resolver {
         logger.info("Resolve time: " + (ed - st) + " Total time:" + totalTime.get());
 
         if (exceptions.size() > 0) {
-            throw exceptions.get(0);
+            // Lets resolve original way.
+            for (int i = 0; i < environments.size(); i++) {
+                TargetEnvironment environment = environments.get(i);
+                resolveStep(project, results, environment, i);
+            }
+
+//            throw exceptions.get(0);
         }
 
         context.reportUsedLocalIUs(usedTargetPlatformUnits);
