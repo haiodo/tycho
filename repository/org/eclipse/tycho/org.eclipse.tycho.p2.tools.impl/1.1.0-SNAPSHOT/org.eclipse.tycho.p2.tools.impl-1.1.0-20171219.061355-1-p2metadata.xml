@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.tycho.p2.tools.impl' version='1.1.0.201712190613' singleton='false'>
+    <update id='org.eclipse.tycho.p2.tools.impl' range='[0.0.0,1.1.0.201712190613)' severity='0'/>
+    <properties size='6'>
+      <property name='org.eclipse.equinox.p2.name' value='Tycho p2 Tools Bundle'/>
+      <property name='org.eclipse.equinox.p2.description' value='Implementation of tools for generating, copying, and using p2 repositories in Tycho'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='maven-groupId' value='org.eclipse.tycho'/>
+      <property name='maven-artifactId' value='org.eclipse.tycho.p2.tools.impl'/>
+      <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+    </properties>
+    <provides size='3'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.tycho.p2.tools.impl' version='1.1.0.201712190613'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.tycho.p2.tools.impl' version='1.1.0.201712190613'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='36'>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.director.app' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.publisher' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.updatesite' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.repository' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.repository.tools' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata.repository' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.artifact.repository' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.publisher.eclipse' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.engine' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.director' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.equinox.frameworkadmin' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.artifacts' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.core.resolver.shared' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.core.shared' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.impl.publisher' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.metadata' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.remote' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.repository' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.resolver.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.target' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.target.ee' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools.baseline.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools.director.shared' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools.mirroring.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools.publisher.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.p2.tools.verifier.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.repository.publishing' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.repository.registry' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.repository.registry.facade' range='0.0.0'/>
+      <required namespace='java.package' name='org.eclipse.tycho.repository.util' range='0.0.0'/>
+      <required namespace='java.package' name='org.osgi.framework' range='[1.5.0,2.0.0)'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.tycho.p2.tools.impl' version='1.1.0.201712190613'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.tycho.p2.tools.impl&#xA;Bundle-Version: 1.1.0.201712190613&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

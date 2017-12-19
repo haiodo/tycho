@@ -5,38 +5,38 @@
   <version>1.1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20171219.053942</timestamp>
+      <timestamp>20171219.061422</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20171219053942</lastUpdated>
+    <lastUpdated>20171219061422</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.1.0-20171219.053942-1</value>
-        <updated>20171219053942</updated>
+        <value>1.1.0-20171219.061422-1</value>
+        <updated>20171219061422</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.1.0-20171219.053942-1</value>
-        <updated>20171219053942</updated>
+        <value>1.1.0-20171219.061422-1</value>
+        <updated>20171219061422</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2metadata</classifier>
         <extension>xml</extension>
-        <value>1.1.0-20171219.053942-1</value>
-        <updated>20171219053942</updated>
+        <value>1.1.0-20171219.061422-1</value>
+        <updated>20171219061422</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>p2artifacts</classifier>
         <extension>xml</extension>
-        <value>1.1.0-20171219.053942-1</value>
-        <updated>20171219053942</updated>
+        <value>1.1.0-20171219.061422-1</value>
+        <updated>20171219061422</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.1.0-20171219.053942-1</value>
-        <updated>20171219053942</updated>
+        <value>1.1.0-20171219.061422-1</value>
+        <updated>20171219061422</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
