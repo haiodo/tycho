@@ -96,11 +96,10 @@ public class MirrorStandaloneTest {
 
     @Test
     public void testMirrorMatchExpression() throws Exception {
-        subject.mirrorStandalone(
-                e342PlusFragmentsRepo(),
-                destinationRepo,
-                Collections.singletonList(new IUDescription(null, null, "id == $0 && version == $1", new String[] {
-                        "org.eclipse.core.runtime", "3.4.0.v20080512" })), new MirrorOptions(), targetFolder);
+        subject.mirrorStandalone(e342PlusFragmentsRepo(), destinationRepo,
+                Collections.singletonList(new IUDescription(null, null, "id == $0 && version == $1",
+                        new String[] { "org.eclipse.core.runtime", "3.4.0.v20080512" })),
+                new MirrorOptions(), targetFolder);
         assertEquals(1, getMirroredBundleFiles().length);
         assertTrue(repoFile(destinationRepo, "plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar").exists());
     }
@@ -123,8 +122,8 @@ public class MirrorStandaloneTest {
     @Test(expected = FacadeException.class)
     public void testMirrorNotExisting() throws Exception {
         subject.mirrorStandalone(e342PlusFragmentsRepo(), destinationRepo,
-                Collections.singletonList(new IUDescription("org.eclipse.core.runtime", "10.0.0")),
-                new MirrorOptions(), targetFolder);
+                Collections.singletonList(new IUDescription("org.eclipse.core.runtime", "10.0.0")), new MirrorOptions(),
+                targetFolder);
     }
 
     @Test
@@ -139,8 +138,10 @@ public class MirrorStandaloneTest {
 
     @Test(expected = FacadeException.class)
     public void testNotIgnoringErrorsShouldThrowException() throws FacadeException {
+        MirrorOptions mirrorOptions = new MirrorOptions();
+        mirrorOptions.setIgnoreErrors(false);
         subject.mirrorStandalone(sourceRepos("invalid/wrong_checksum"), destinationRepo,
-                Collections.singletonList(new IUDescription("jarsigning", "0.0.1.201109191414")), new MirrorOptions(),
+                Collections.singletonList(new IUDescription("jarsigning", "0.0.1.201109191414")), mirrorOptions,
                 targetFolder);
     }
 

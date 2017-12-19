@@ -24,5 +24,4 @@
 	<packaging>eclipse-plugin</packaging>
 
 	<name>Tycho p2 Resolver Bundle</name>
-
 </project>

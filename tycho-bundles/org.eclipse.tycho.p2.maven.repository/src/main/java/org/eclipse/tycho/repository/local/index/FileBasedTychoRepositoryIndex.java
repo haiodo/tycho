@@ -52,6 +52,8 @@ public class FileBasedTychoRepositoryIndex implements TychoRepositoryIndex {
     private Set<GAV> removedGavs = new HashSet<GAV>();
     private Set<GAV> gavs = new HashSet<GAV>();
 
+    private long lastModification = 0;
+
     private FileBasedTychoRepositoryIndex(File indexFile, FileLockService fileLockService, MavenLogger logger) {
         super();
         this.indexFile = indexFile;
@@ -108,6 +110,20 @@ public class FileBasedTychoRepositoryIndex implements TychoRepositoryIndex {
         }
         lock();
         try {
+
+            // Check do we need to perform any actions here.
+            if (indexFile.isFile()) {
+                long lastModif = indexFile.lastModified();
+                if (lastModif == this.lastModification) {
+                    // It seems file is not modified.
+                    if (addedGavs.size() == 0 && removedGavs.size() == 0) {
+                        // it seems no actions are really required.
+                        // Just unlock file.
+                        return;
+                    }
+                }
+            }
+
             reconcile();
             // minimize time window for corrupting the file by first writing to a temp file, then moving it
             File tempFile = File.createTempFile("index", "tmp", indexFile.getParentFile());
@@ -116,6 +132,7 @@ public class FileBasedTychoRepositoryIndex implements TychoRepositoryIndex {
                 indexFile.delete();
             }
             tempFile.renameTo(indexFile);
+            this.lastModification = indexFile.lastModified();
         } finally {
             unlock();
         }

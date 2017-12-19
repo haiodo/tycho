@@ -15,6 +15,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.model.Dependency;
@@ -28,6 +29,7 @@ import org.eclipse.tycho.PackagingType;
 import org.eclipse.tycho.ReactorProject;
 import org.eclipse.tycho.artifacts.DependencyArtifacts;
 import org.eclipse.tycho.core.osgitools.BundleReader;
+import org.eclipse.tycho.core.shared.LRUCache;
 
 public final class MavenDependencyInjector {
 
@@ -99,10 +101,8 @@ public final class MavenDependencyInjector {
                             result.add(nestedJarDependency);
                         } else if (nestedJarOrDir.isDirectory()) {
                             // system-scoped dependencies on directories are not supported
-                            logger.debug("Dependency from "
-                                    + project.getBasedir()
-                                    + " to nested directory classpath entry "
-                                    + nestedJarOrDir
+                            logger.debug("Dependency from " + project.getBasedir()
+                                    + " to nested directory classpath entry " + nestedJarOrDir
                                     + " can not be represented in Maven model and will not be visible to non-OSGi aware Maven plugins");
                         }
                     }
@@ -114,8 +114,17 @@ public final class MavenDependencyInjector {
         return result;
     }
 
+    Map<File, String[]> cachedClassparth = new LRUCache<File, String[]>(2000);
+
     private String[] getClasspathElements(File bundleLocation) {
-        return bundleReader.loadManifest(bundleLocation).getBundleClasspath();
+        String[] result = cachedClassparth.get(bundleLocation);
+        if (result != null) {
+            return result;
+        }
+
+        String[] classpath = bundleReader.loadManifest(bundleLocation).getBundleClasspath();
+        cachedClassparth.put(bundleLocation, classpath);
+        return classpath;
     }
 
     private Dependency createSystemScopeDependency(ArtifactKey artifactKey, File location) {
@@ -150,14 +159,12 @@ public final class MavenDependencyInjector {
                     // we can only add a system scope dependency for an existing (checked-in) jar file
                     // otherwise maven will throw a DependencyResolutionException
                     if (jar.isFile()) {
-                        Dependency systemScopeDependency = createSystemScopeDependency(artifact.getKey(), artifact
-                                .getMavenProject().getGroupId(), jar);
+                        Dependency systemScopeDependency = createSystemScopeDependency(artifact.getKey(),
+                                artifact.getMavenProject().getGroupId(), jar);
                         systemScopeDependency.setClassifier(classpathElement);
                         result.add(systemScopeDependency);
                     } else {
-                        logger.debug("Dependency from "
-                                + project.getBasedir()
-                                + " to nested classpath entry "
+                        logger.debug("Dependency from " + project.getBasedir() + " to nested classpath entry "
                                 + jar.getAbsolutePath()
                                 + " can not be represented in Maven model and will not be visible to non-OSGi aware Maven plugins");
                     }

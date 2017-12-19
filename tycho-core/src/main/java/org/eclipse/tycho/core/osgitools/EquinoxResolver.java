@@ -26,6 +26,7 @@ import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
 import org.codehaus.plexus.logging.Logger;
+import org.eclipse.osgi.framework.util.Headers;
 import org.eclipse.osgi.internal.resolver.StateImpl;
 import org.eclipse.osgi.service.resolver.BundleDescription;
 import org.eclipse.osgi.service.resolver.BundleSpecification;
@@ -43,6 +44,7 @@ import org.eclipse.tycho.core.TychoConstants;
 import org.eclipse.tycho.core.ee.ExecutionEnvironmentUtils;
 import org.eclipse.tycho.core.ee.shared.ExecutionEnvironment;
 import org.eclipse.tycho.core.resolver.shared.PlatformPropertiesUtils;
+import org.eclipse.tycho.core.shared.LRUCache;
 import org.eclipse.tycho.core.shared.TargetEnvironment;
 import org.eclipse.tycho.core.utils.TychoProjectUtils;
 import org.osgi.framework.BundleException;
@@ -239,17 +241,17 @@ public class EquinoxResolver {
 
     public void addBundle(State state, long id, File bundleLocation, Dictionary<String, String> mf, boolean override)
             throws BundleException {
-        BundleDescription descriptor = factory
-                .createBundleDescription(state, mf, getNormalizedPath(bundleLocation), id);
+        BundleDescription descriptor = factory.createBundleDescription(state, mf, getNormalizedPath(bundleLocation),
+                id);
 
         if (override) {
             BundleDescription[] conflicts = state.getBundles(descriptor.getSymbolicName());
             if (conflicts != null) {
                 for (BundleDescription conflict : conflicts) {
                     state.removeBundle(conflict);
-                    logger.warn(conflict.toString()
-                            + " has been replaced by another bundle with the same symbolic name "
-                            + descriptor.toString());
+                    logger.warn(
+                            conflict.toString() + " has been replaced by another bundle with the same symbolic name "
+                                    + descriptor.toString());
                 }
             }
         }
@@ -261,12 +263,21 @@ public class EquinoxResolver {
         return file.getAbsolutePath();
     }
 
+    private Map<File, Headers<String, String>> manifestCache = new LRUCache<>(2000);
+
     private Dictionary<String, String> loadManifest(File bundleLocation) {
         if (bundleLocation == null || !bundleLocation.exists()) {
             throw new IllegalArgumentException("bundleLocation not found: " + bundleLocation);
         }
 
-        return manifestReader.loadManifest(bundleLocation).getHeaders();
+        Headers<String, String> headers = manifestCache.get(bundleLocation);
+        if (headers != null) {
+            return headers;
+        }
+
+        headers = manifestReader.loadManifest(bundleLocation).getHeaders();
+        manifestCache.put(bundleLocation, headers);
+        return headers;
     }
 
     private Dictionary<String, String> getSystemBundleManifest(Properties properties) {
@@ -279,7 +290,8 @@ public class EquinoxResolver {
         if (systemPackages != null && systemPackages.trim().length() > 0) {
             systemBundleManifest.put(Constants.EXPORT_PACKAGE, systemPackages);
         } else {
-            logger.warn("Undefined or empty org.osgi.framework.system.packages system property, system.bundle does not export any packages.");
+            logger.warn(
+                    "Undefined or empty org.osgi.framework.system.packages system property, system.bundle does not export any packages.");
         }
 
         return systemBundleManifest;
