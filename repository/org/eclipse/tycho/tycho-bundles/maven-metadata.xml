@@ -3,9 +3,10 @@
   <groupId>org.eclipse.tycho</groupId>
   <artifactId>tycho-bundles</artifactId>
   <versioning>
+    <release>1.2.0.han</release>
     <versions>
-      <version>1.1.0-SNAPSHOT</version>
+      <version>1.2.0.han</version>
     </versions>
-    <lastUpdated>20171219113002</lastUpdated>
+    <lastUpdated>20180405081310</lastUpdated>
   </versioning>
 </metadata>
