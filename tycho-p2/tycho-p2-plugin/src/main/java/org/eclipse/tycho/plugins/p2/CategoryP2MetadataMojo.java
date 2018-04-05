@@ -23,7 +23,7 @@ import org.eclipse.sisu.equinox.launching.internal.P2ApplicationLauncher;
  * http://help.eclipse.org/galileo/index.jsp?topic
  * =/org.eclipse.platform.doc.isv/guide/p2_publisher.html
  */
-@Mojo(name = "category-p2-metadata")
+@Mojo(name = "category-p2-metadata", threadSafe = true)
 public class CategoryP2MetadataMojo extends AbstractP2MetadataMojo {
 
     @Parameter(defaultValue = "${project.basedir}/category.xml")

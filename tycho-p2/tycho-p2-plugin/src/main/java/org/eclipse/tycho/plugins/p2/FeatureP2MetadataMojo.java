@@ -12,7 +12,7 @@ package org.eclipse.tycho.plugins.p2;
 
 import org.apache.maven.plugins.annotations.Mojo;
 
-@Mojo(name = "feature-p2-metadata")
+@Mojo(name = "feature-p2-metadata", threadSafe = true)
 public class FeatureP2MetadataMojo extends AbstractP2MetadataMojo {
     @Override
     protected String getPublisherApplication() {

@@ -54,7 +54,7 @@ import org.eclipse.tycho.p2.metadata.IP2Artifact;
 import org.eclipse.tycho.p2.metadata.P2Generator;
 import org.eclipse.tycho.p2.metadata.PublisherOptions;
 
-@Mojo(name = "p2-metadata")
+@Mojo(name = "p2-metadata", threadSafe = true)
 public class P2MetadataMojo extends AbstractMojo {
 
     @Parameter(property = "project")
@@ -153,6 +153,8 @@ public class P2MetadataMojo extends AbstractMojo {
             }
 
             P2Generator p2generator = getService(P2Generator.class);
+            synchronized (p2generator) {
+                Map<String, IP2Artifact> generatedMetadata = p2generator.generateMetadata(artifacts, targetDir);
 
             Map<String, IP2Artifact> generatedMetadata = p2generator.generateMetadata(artifacts,
                     new PublisherOptions(generateDownloadStatsProperty), targetDir);
@@ -162,31 +164,32 @@ public class P2MetadataMojo extends AbstractMojo {
                         baselineRepositories, baselineMode, baselineReplace);
             }
 
-            File contentsXml = new File(targetDir, FILE_NAME_P2_METADATA);
-            File artifactsXml = new File(targetDir, FILE_NAME_P2_ARTIFACTS);
-            p2generator.persistMetadata(generatedMetadata, contentsXml, artifactsXml);
-            projectHelper.attachArtifact(project, EXTENSION_P2_METADATA, CLASSIFIER_P2_METADATA, contentsXml);
-            projectHelper.attachArtifact(project, EXTENSION_P2_ARTIFACTS, CLASSIFIER_P2_ARTIFACTS, artifactsXml);
+                File contentsXml = new File(targetDir, FILE_NAME_P2_METADATA);
+                File artifactsXml = new File(targetDir, FILE_NAME_P2_ARTIFACTS);
+                p2generator.persistMetadata(generatedMetadata, contentsXml, artifactsXml);
+                projectHelper.attachArtifact(project, EXTENSION_P2_METADATA, CLASSIFIER_P2_METADATA, contentsXml);
+                projectHelper.attachArtifact(project, EXTENSION_P2_ARTIFACTS, CLASSIFIER_P2_ARTIFACTS, artifactsXml);
 
-            ReactorProject reactorProject = DefaultReactorProject.adapt(project);
+                ReactorProject reactorProject = DefaultReactorProject.adapt(project);
 
-            Set<Object> installableUnits = new LinkedHashSet<>();
-            for (Map.Entry<String, IP2Artifact> entry : generatedMetadata.entrySet()) {
-                String classifier = entry.getKey();
-                IP2Artifact p2artifact = entry.getValue();
+                Set<Object> installableUnits = new LinkedHashSet<>();
+                for (Map.Entry<String, IP2Artifact> entry : generatedMetadata.entrySet()) {
+                    String classifier = entry.getKey();
+                    IP2Artifact p2artifact = entry.getValue();
 
-                installableUnits.addAll(p2artifact.getInstallableUnits());
+                    installableUnits.addAll(p2artifact.getInstallableUnits());
 
-                // attach any new classified artifacts, like feature root files for example
-                if (classifier != null && !hasAttachedArtifact(project, classifier)) {
-                    projectHelper.attachArtifact(project, getExtension(p2artifact.getLocation()), classifier,
-                            p2artifact.getLocation());
+                    // attach any new classified artifacts, like feature root files for example
+                    if (classifier != null && !hasAttachedArtifact(project, classifier)) {
+                        projectHelper.attachArtifact(project, getExtension(p2artifact.getLocation()), classifier,
+                                p2artifact.getLocation());
+                    }
                 }
-            }
 
-            // TODO 353889 distinguish between dependency resolution seed units ("primary") and other units of the project
-            reactorProject.setDependencyMetadata(true, installableUnits);
-            reactorProject.setDependencyMetadata(false, Collections.emptySet());
+                // TODO 353889 distinguish between dependency resolution seed units ("primary") and other units of the project
+                reactorProject.setDependencyMetadata(true, installableUnits);
+                reactorProject.setDependencyMetadata(false, Collections.emptySet());
+            }
         } catch (IOException e) {
             throw new MojoExecutionException("Could not generate P2 metadata", e);
         }

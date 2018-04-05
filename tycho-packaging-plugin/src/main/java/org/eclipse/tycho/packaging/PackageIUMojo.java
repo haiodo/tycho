@@ -32,7 +32,7 @@ import org.eclipse.tycho.model.IU;
 /**
  * Creates the zip for the IU and attaches it as an artifact
  */
-@Mojo(name = "package-iu", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME)
+@Mojo(name = "package-iu", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME, threadSafe = true)
 public class PackageIUMojo extends AbstractTychoPackagingMojo {
 
     @Parameter(property = "project.build.directory", required = true, readonly = true)

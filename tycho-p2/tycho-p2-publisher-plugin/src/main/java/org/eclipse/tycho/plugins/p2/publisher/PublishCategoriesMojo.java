@@ -36,7 +36,7 @@ import org.eclipse.tycho.p2.tools.publisher.facade.PublisherServiceFactory;
  * 
  * @see http://wiki.eclipse.org/Equinox/p2/Publisher
  */
-@Mojo(name = "publish-categories", defaultPhase = LifecyclePhase.PACKAGE)
+@Mojo(name = "publish-categories", defaultPhase = LifecyclePhase.PACKAGE, threadSafe = true)
 public final class PublishCategoriesMojo extends AbstractPublishMojo {
 
     @Override

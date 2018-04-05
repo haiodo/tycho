@@ -25,7 +25,7 @@ import org.eclipse.tycho.model.FeatureRef;
 import org.eclipse.tycho.model.UpdateSite;
 import org.eclipse.tycho.model.UpdateSite.SiteFeatureRef;
 
-@Mojo(name = "update-site")
+@Mojo(name = "update-site", threadSafe = true)
 public class UpdateSiteMojo extends AbstractTychoPackagingMojo {
 
     @Parameter(defaultValue = "${project.build.directory}/site")

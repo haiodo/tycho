@@ -110,7 +110,7 @@ import org.osgi.framework.Version;
  * configuration on the <tt>target-platform-configuration</tt> plugin.
  * </p>
  */
-@Mojo(name = "test", defaultPhase = LifecyclePhase.INTEGRATION_TEST, requiresDependencyResolution = ResolutionScope.RUNTIME)
+@Mojo(name = "test", defaultPhase = LifecyclePhase.INTEGRATION_TEST, requiresDependencyResolution = ResolutionScope.RUNTIME, threadSafe = true)
 public class TestMojo extends AbstractMojo {
 
     /**
@@ -689,8 +689,9 @@ public class TestMojo extends AbstractMojo {
             throw new MojoExecutionException("Configured testRuntime parameter value '" + testRuntime
                     + "' is unkown. Allowed values: 'default', 'p2Installed'.");
         }
-
-        runTest(equinoxTestRuntime);
+        synchronized (TestMojo.class) {
+            runTest(equinoxTestRuntime);
+        }
     }
 
     protected boolean shouldSkip() {

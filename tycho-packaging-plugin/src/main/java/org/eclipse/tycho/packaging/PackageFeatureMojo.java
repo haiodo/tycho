@@ -42,7 +42,7 @@ import org.eclipse.tycho.core.shared.BuildPropertiesParser;
 import org.eclipse.tycho.core.utils.TychoProjectUtils;
 import org.eclipse.tycho.model.Feature;
 
-@Mojo(name = "package-feature", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME)
+@Mojo(name = "package-feature", defaultPhase = LifecyclePhase.PACKAGE, requiresDependencyResolution = ResolutionScope.RUNTIME, threadSafe = true)
 public class PackageFeatureMojo extends AbstractTychoPackagingMojo {
 
     private static final String FEATURE_PROPERTIES = "feature.properties";

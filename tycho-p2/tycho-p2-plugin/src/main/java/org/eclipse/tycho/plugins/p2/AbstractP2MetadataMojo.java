@@ -73,16 +73,18 @@ public abstract class AbstractP2MetadataMojo extends AbstractMojo {
             return;
         }
 
-        try {
-            if (getUpdateSiteLocation().isDirectory()) {
-                generateMetadata();
-            } else {
-                logUpdateSiteLocationNotFound();
+        synchronized (AbstractP2MetadataMojo.class) {
+            try {
+                if (getUpdateSiteLocation().isDirectory()) {
+                    generateMetadata();
+                } else {
+                    logUpdateSiteLocationNotFound();
+                }
+            } catch (MojoFailureException e) {
+                throw e;
+            } catch (Exception e) {
+                throw new MojoExecutionException("Cannot generate P2 metadata", e);
             }
-        } catch (MojoFailureException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new MojoExecutionException("Cannot generate P2 metadata", e);
         }
     }
 

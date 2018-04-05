@@ -65,7 +65,7 @@ import org.eclipse.tycho.locking.facade.FileLocker;
 import org.eclipse.tycho.model.BundleConfiguration;
 import org.eclipse.tycho.model.ProductConfiguration;
 
-@Mojo(name = "product-export")
+@Mojo(name = "product-export", threadSafe = true)
 public class ProductExportMojo extends AbstractTychoPackagingMojo {
     /**
      * The product configuration, a .product file. This file manages all aspects of a product
@@ -125,12 +125,11 @@ public class ProductExportMojo extends AbstractTychoPackagingMojo {
 
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
-        getLog().warn(
-                "The packaging type 'eclipse-application' is deprecated; use 'eclipse-repository' instead. "
-                        + "See http://wiki.eclipse.org/Tycho_Messages_Explained#Eclipse_Application");
+        getLog().warn("The packaging type 'eclipse-application' is deprecated; use 'eclipse-repository' instead. "
+                + "See http://wiki.eclipse.org/Tycho_Messages_Explained#Eclipse_Application");
         if (!productConfigurationFile.exists()) {
-            throw new MojoExecutionException("Product configuration file not found "
-                    + productConfigurationFile.getAbsolutePath());
+            throw new MojoExecutionException(
+                    "Product configuration file not found " + productConfigurationFile.getAbsolutePath());
         }
 
         try {
@@ -270,7 +269,7 @@ public class ProductExportMojo extends AbstractTychoPackagingMojo {
      * 
      * Not supported are the properties root.permissions and root.link.
      * 
-     * @see http 
+     * @see http
      *      ://help.eclipse.org/ganymede/index.jsp?topic=/org.eclipse.pde.doc.user/tasks/pde_rootfiles
      *      .htm
      * @throws MojoExecutionException
@@ -436,8 +435,8 @@ public class ProductExportMojo extends AbstractTychoPackagingMojo {
         }
     }
 
-    private void generateConfigIni(TargetEnvironment environment, File target) throws MojoExecutionException,
-            MojoFailureException {
+    private void generateConfigIni(TargetEnvironment environment, File target)
+            throws MojoExecutionException, MojoFailureException {
         getLog().debug("Generating config.ini");
         Properties props = new Properties();
         String id = productConfiguration.getProduct();
@@ -529,8 +528,8 @@ public class ProductExportMojo extends AbstractTychoPackagingMojo {
         return bundles;
     }
 
-    private void copyExecutable(TargetEnvironment environment, File target) throws MojoExecutionException,
-            MojoFailureException {
+    private void copyExecutable(TargetEnvironment environment, File target)
+            throws MojoExecutionException, MojoFailureException {
         getLog().debug("Creating launcher");
 
         ArtifactDescriptor artifact = getDependencyArtifacts().getArtifact(ArtifactType.TYPE_ECLIPSE_FEATURE,

@@ -66,6 +66,7 @@ public class ProjectorResolutionStrategy extends AbstractSlicerResolutionStrateg
         IQueryable<IInstallableUnit> slice = slice(properties, monitor);
 
         Set<IInstallableUnit> seedUnits = new LinkedHashSet<>(data.getRootIUs());
+
         List<IRequirement> seedRequires = new ArrayList<>();
         if (data.getAdditionalRequirements() != null) {
             seedRequires.addAll(data.getAdditionalRequirements());
@@ -77,8 +78,8 @@ public class ProjectorResolutionStrategy extends AbstractSlicerResolutionStrateg
 
         Projector projector = new Projector(slice, newSelectionContext, new HashSet<IInstallableUnit>(), false);
         projector.encode(createUnitRequiring("tycho", seedUnits, seedRequires),
-                EMPTY_IU_ARRAY /* alreadyExistingRoots */, new QueryableArray(EMPTY_IU_ARRAY) /* installedIUs */,
-                seedUnits /* newRoots */, monitor);
+                EMPTY_IU_ARRAY /* alreadyExistingRoots */,
+                new QueryableArray(EMPTY_IU_ARRAY) /* installedIUs */, seedUnits /* newRoots */, monitor);
         IStatus s = projector.invokeSolver(monitor);
         if (s.getSeverity() == IStatus.ERROR) {
             // log all transitive requirements which cannot be satisfied; this doesn't print the dependency chain from the seed to the units with missing requirements, so this is less useful than the "explanation" 
@@ -142,13 +143,14 @@ public class ProjectorResolutionStrategy extends AbstractSlicerResolutionStrateg
 
         IInstallableUnit swtFragment = null;
 
-        all_ius: for (Iterator<IInstallableUnit> iter = new QueryableCollection(availableIUs).query(
-                QueryUtil.ALL_UNITS, monitor).iterator(); iter.hasNext();) {
+        all_ius: for (Iterator<IInstallableUnit> iter = new QueryableCollection(availableIUs)
+                .query(QueryUtil.ALL_UNITS, monitor).iterator(); iter.hasNext();) {
             IInstallableUnit iu = iter.next();
             if (iu.getId().startsWith("org.eclipse.swt") && isApplicable(newSelectionContext, iu.getFilter())
                     && providesJavaPackages(iu)) {
                 for (IProvidedCapability provided : iu.getProvidedCapabilities()) {
-                    if ("osgi.fragment".equals(provided.getNamespace()) && "org.eclipse.swt".equals(provided.getName())) {
+                    if ("osgi.fragment".equals(provided.getNamespace())
+                            && "org.eclipse.swt".equals(provided.getName())) {
                         if (swtFragment == null || swtFragment.getVersion().compareTo(iu.getVersion()) < 0) {
                             swtFragment = iu;
                         }
@@ -159,8 +161,8 @@ public class ProjectorResolutionStrategy extends AbstractSlicerResolutionStrateg
         }
 
         if (swtFragment == null) {
-            throw new RuntimeException("Could not determine SWT implementation fragment bundle for environment "
-                    + newSelectionContext);
+            throw new RuntimeException(
+                    "Could not determine SWT implementation fragment bundle for environment " + newSelectionContext);
         }
 
         resolutionResult.add(swtFragment);

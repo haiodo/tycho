@@ -111,5 +111,4 @@ public class ResolutionDataImpl implements ResolutionData {
     public void setAdditionalFilterProperties(Map<String, String> additionalFilterProperties) {
         this.additionalFilterProperties = additionalFilterProperties;
     }
-
 }

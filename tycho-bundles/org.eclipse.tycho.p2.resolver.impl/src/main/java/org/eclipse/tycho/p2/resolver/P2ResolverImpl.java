@@ -13,7 +13,6 @@ package org.eclipse.tycho.p2.resolver;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -23,9 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.equinox.p2.metadata.IArtifactKey;
@@ -78,6 +74,7 @@ public class P2ResolverImpl implements P2Resolver {
     private Map<String, String> additionalFilterProperties = new HashMap<>();
 
     private final List<IRequirement> additionalRequirements = new ArrayList<>();
+    private final List<String> additionalRequirementsData = new ArrayList<>();
 
     private TargetPlatformFactoryImpl targetPlatformFactory;
 
@@ -112,77 +109,45 @@ public class P2ResolverImpl implements P2Resolver {
             addDependenciesForTests();
         }
 
-        P2ResolutionResult[] results = new P2ResolutionResult[environments.size()];
+        ArrayList<P2ResolutionResult> results = new ArrayList<>();
         usedTargetPlatformUnits = new LinkedHashSet<>();
+
+        ResolutionProjectCache cache = ResolutionCacheConfig.isUseProjectCache()
+                ? new ResolutionProjectCache(ResolutionCacheConfig.getCacheLocation(), project,
+                        ProjectorResolutionStrategy.class.getName(), additionalRequirementsData)
+                : null;
 
         long st = System.currentTimeMillis();
 
-        boolean useAsync = environments.size() > 1;
-
-        List<CompletableFuture<Void>> futures = new ArrayList<>();
-        List<RuntimeException> exceptions = new ArrayList<>();
-        AtomicLong totalTime = new AtomicLong(0);
-        for (int i = 0; i < environments.size(); i++) {
-            TargetEnvironment environment = environments.get(i);
-            if (useAsync) {
-                final int fi = i;
-                futures.add(CompletableFuture.runAsync(() -> {
-                    long sts = System.currentTimeMillis();
-                    for (int retry = 0; retry < 5; retry++) {
-                        try {
-                            resolveStep(project, results, environment, fi);
-                            break;
-                        } catch (RuntimeException ex) {
-                            synchronized (exceptions) {
-                                exceptions.add(ex);
-                            }
-                        }
-                    }
-                    long ed = System.currentTimeMillis();
-                    totalTime.addAndGet(ed - st);
-                }));
-            } else {
-                resolveStep(project, results, environment, i);
-            }
-        }
-        if (useAsync) {
-            try {
-                CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).get();
-            } catch (InterruptedException | ExecutionException e) {
-                // Ignore
-            }
+        for (TargetEnvironment environment : environments) {
+            boolean lastEnvironment = results.size() == environments.size() - 1;
+            results.add(resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment, cache,
+                    lastEnvironment));
         }
         long ed = System.currentTimeMillis();
-        logger.info("Resolve time: " + (ed - st) + " Total time:" + totalTime.get());
+        logger.info("Resolve time: " + (ed - st));
 
-        if (exceptions.size() > 0) {
-            // Lets resolve original way.
-            for (int i = 0; i < environments.size(); i++) {
-                TargetEnvironment environment = environments.get(i);
-                resolveStep(project, results, environment, i);
-            }
-
-//            throw exceptions.get(0);
+        if (cache != null) {
+            cache.save();
         }
 
         context.reportUsedLocalIUs(usedTargetPlatformUnits);
         usedTargetPlatformUnits = null;
 
-        return Arrays.asList(results);
-    }
-
-    private void resolveStep(ReactorProject project, P2ResolutionResult[] results, TargetEnvironment environment,
-            int i) {
-        P2ResolutionResult result = resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment);
-        synchronized (results) {
-            results[i] = result;
-        }
+        return results;
     }
 
     @Override
     public P2ResolutionResult collectProjectDependencies(TargetPlatform targetPlatform, ReactorProject project) {
         setContext(targetPlatform, project);
-        return resolveDependencies(project, new DependencyCollector(logger), new TargetEnvironment(null, null, null));
+
+        ResolutionProjectCache cache = ResolutionCacheConfig.isUseProjectCache()
+                ? new ResolutionProjectCache(ResolutionCacheConfig.getCacheLocation(), project,
+                        DependencyCollector.class.getName(), additionalRequirementsData)
+                : null;
+
+        return resolveDependencies(project, new DependencyCollector(logger), new TargetEnvironment(null, null, null),
+                cache, true);
     }
 
     @Override
@@ -227,12 +192,17 @@ public class P2ResolverImpl implements P2Resolver {
 
     @SuppressWarnings("unchecked")
     protected P2ResolutionResult resolveDependencies(ReactorProject project, AbstractResolutionStrategy strategy,
-            TargetEnvironment environment) {
-        ResolutionDataImpl data = new ResolutionDataImpl(context.getEEResolutionHints());
+            TargetEnvironment environment, ResolutionProjectCache cache, boolean saveMavenRepository) {
 
         Set<IInstallableUnit> availableUnits = context.getInstallableUnits();
+
+        Collection<IInstallableUnit> newState = null;
+
+        ResolutionDataImpl data = new ResolutionDataImpl(context.getEEResolutionHints());
+        Set<IInstallableUnit> dependencyMetadata = null;
         if (project != null) {
-            data.setRootIUs((Set<IInstallableUnit>) project.getDependencyMetadata(true));
+            dependencyMetadata = (Set<IInstallableUnit>) project.getDependencyMetadata(true);
+            data.setRootIUs(dependencyMetadata);
             Collection<IInstallableUnit> projectSecondaryIUs = (Collection<IInstallableUnit>) project
                     .getDependencyMetadata(false);
             if (!projectSecondaryIUs.isEmpty()) {
@@ -247,23 +217,62 @@ public class P2ResolverImpl implements P2Resolver {
         data.setAdditionalFilterProperties(additionalFilterProperties);
 
         strategy.setData(data);
-        Collection<IInstallableUnit> newState;
-        try {
-            newState = strategy.resolve(environment, monitor);
-        } catch (ResolverException e) {
-            logger.info(e.getSelectionContext());
-            logger.error("Cannot resolve project dependencies:");
-            new MultiLineLogger(logger).error(e.getDetails(), "  ");
-            logger.error("");
-            logger.error("See http://wiki.eclipse.org/Tycho/Dependency_Resolution_Troubleshooting for help.");
-            throw new DependencyResolutionException("Cannot resolve dependencies of " + project, e);
+
+        if (cache == null || !cache.isAvailabble(environment)) {
+            try {
+                newState = strategy.resolve(environment, monitor);
+            } catch (ResolverException e) {
+                logger.info(e.getSelectionContext());
+                logger.error("Cannot resolve project dependencies:");
+                new MultiLineLogger(logger).error(e.getDetails(), "  ");
+                logger.error("");
+                logger.error("See http://wiki.eclipse.org/Tycho/Dependency_Resolution_Troubleshooting for help.");
+                throw new DependencyResolutionException("Cannot resolve dependencies of " + project, e);
+            }
+
+            cache.update(newState, environment);
+        } else {
+            Set<String> missing = new HashSet<String>();
+            newState = cache.getState(environment, availableUnits, missing);
+            if (newState == null || missing.size() > 0) {
+                logger.info("no dependency found: " + missing.toString() + " -- Recomputing");
+                try {
+                    newState = strategy.resolve(environment, monitor);
+                } catch (ResolverException e) {
+                    logger.info(e.getSelectionContext());
+                    logger.error("Cannot resolve project dependencies:");
+                    new MultiLineLogger(logger).error(e.getDetails(), "  ");
+                    logger.error("");
+                    logger.error("See http://wiki.eclipse.org/Tycho/Dependency_Resolution_Troubleshooting for help.");
+                    throw new DependencyResolutionException("Cannot resolve dependencies of " + project, e);
+                }
+            }
+
+            if (ResolutionCacheConfig.isDoValidate()) {
+                try {
+                    Set<IInstallableUnit> newStateValidate = new HashSet<>(strategy.resolve(environment, monitor));
+                    Set<IInstallableUnit> newStateSet = new HashSet<IInstallableUnit>(newState);
+                    if (!(newStateValidate.size() == newStateSet.size() && newStateValidate.containsAll(newStateSet))) {
+                        logger.error("Resolved modules are not same as cached...!!!!");
+                    }
+                } catch (ResolverException e) {
+                    logger.info(e.getSelectionContext());
+                    logger.error("Cannot resolve project dependencies:");
+                    new MultiLineLogger(logger).error(e.getDetails(), "  ");
+                    logger.error("");
+                    logger.error("See http://wiki.eclipse.org/Tycho/Dependency_Resolution_Troubleshooting for help.");
+                    throw new DependencyResolutionException("Cannot resolve dependencies of " + project, e);
+                }
+            }
         }
 
         if (usedTargetPlatformUnits != null) {
             usedTargetPlatformUnits.addAll(newState);
         }
 
-        return toResolutionResult(newState, project);
+        P2ResolutionResult result = toResolutionResult(newState, project);
+
+        return result;
     }
 
     private P2ResolutionResult toResolutionResult(Collection<IInstallableUnit> newState,
@@ -279,7 +288,6 @@ public class P2ResolverImpl implements P2Resolver {
             result.removeEntriesWithUnknownType();
 
             // local repository index needs to be saved manually
-
             context.saveLocalMavenRepository();
 
             failIfArtifactsMissing(missingArtifacts);
@@ -467,6 +475,7 @@ public class P2ResolverImpl implements P2Resolver {
             throw new IllegalArtifactReferenceException(
                     "The string \"" + versionRange + "\" is not a valid OSGi version range");
         }
+        additionalRequirementsData.add(type + ":" + id + ":" + versionRange);
         additionalRequirements.add(ArtifactTypeHelper.createRequirementFor(type, id, parsedVersionRange));
     }
 
@@ -481,6 +490,10 @@ public class P2ResolverImpl implements P2Resolver {
         additionalRequirements.add(optionalGreedyRequirementTo("org.eclipse.equinox.launcher"));
         additionalRequirements.add(optionalGreedyRequirementTo("org.eclipse.core.runtime"));
         additionalRequirements.add(optionalGreedyRequirementTo("org.eclipse.ui.ide.application"));
+
+        additionalRequirementsData.add("" + ":" + "org.eclipse.equinox.launcher");
+        additionalRequirementsData.add("" + ":" + "org.eclipse.core.runtime");
+        additionalRequirementsData.add("" + ":" + "org.eclipse.ui.ide.application");
     }
 
     private static IRequirement optionalGreedyRequirementTo(String bundleId) {

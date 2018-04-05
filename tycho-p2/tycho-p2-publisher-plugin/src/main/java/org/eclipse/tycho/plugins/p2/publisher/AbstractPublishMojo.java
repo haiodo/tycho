@@ -31,9 +31,11 @@ public abstract class AbstractPublishMojo extends AbstractP2Mojo {
 
     @Override
     public final void execute() throws MojoExecutionException, MojoFailureException {
-        PublisherServiceFactory publisherServiceFactory = osgiServices.getService(PublisherServiceFactory.class);
-        Collection<DependencySeed> units = publishContent(publisherServiceFactory);
-        postPublishedIUs(units);
+        synchronized (AbstractPublishMojo.class) {
+            PublisherServiceFactory publisherServiceFactory = osgiServices.getService(PublisherServiceFactory.class);
+            Collection<DependencySeed> units = publishContent(publisherServiceFactory);
+            postPublishedIUs(units);
+        }
     }
 
     /**
