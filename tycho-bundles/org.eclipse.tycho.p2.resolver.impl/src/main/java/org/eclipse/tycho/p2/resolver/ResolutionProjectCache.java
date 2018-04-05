@@ -256,8 +256,8 @@ public class ResolutionProjectCache {
                             units.add(u);
                         }
                     }
-                    if (units.size() == 1) {
-                        newState.add(unit);
+                    if (units.size() >= 1) {
+                        newState.add(units.get(0));
                     } else {
                         missing.add(key);
                     }

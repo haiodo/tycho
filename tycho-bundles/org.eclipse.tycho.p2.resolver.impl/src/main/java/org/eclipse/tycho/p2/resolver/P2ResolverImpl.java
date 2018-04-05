@@ -270,13 +270,13 @@ public class P2ResolverImpl implements P2Resolver {
             usedTargetPlatformUnits.addAll(newState);
         }
 
-        P2ResolutionResult result = toResolutionResult(newState, project);
+        P2ResolutionResult result = toResolutionResult(newState, project, saveMavenRepository);
 
         return result;
     }
 
-    private P2ResolutionResult toResolutionResult(Collection<IInstallableUnit> newState,
-            ReactorProject currentProject) {
+    private P2ResolutionResult toResolutionResult(Collection<IInstallableUnit> newState, ReactorProject currentProject,
+            boolean saveMavenRepository) {
         DefaultP2ResolutionResult result = new DefaultP2ResolutionResult();
         Set<String> missingArtifacts = new TreeSet<>();
 
@@ -288,7 +288,9 @@ public class P2ResolverImpl implements P2Resolver {
             result.removeEntriesWithUnknownType();
 
             // local repository index needs to be saved manually
-            context.saveLocalMavenRepository();
+            if (saveMavenRepository) {
+                context.saveLocalMavenRepository();
+            }
 
             failIfArtifactsMissing(missingArtifacts);
 
@@ -521,6 +523,6 @@ public class P2ResolverImpl implements P2Resolver {
 
         Set<IInstallableUnit> newState = result.toUnmodifiableSet();
 
-        return toResolutionResult(newState, null);
+        return toResolutionResult(newState, null, true);
     }
 }
