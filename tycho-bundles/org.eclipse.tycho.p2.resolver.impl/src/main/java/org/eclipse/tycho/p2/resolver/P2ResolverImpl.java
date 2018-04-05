@@ -229,8 +229,9 @@ public class P2ResolverImpl implements P2Resolver {
                 logger.error("See http://wiki.eclipse.org/Tycho/Dependency_Resolution_Troubleshooting for help.");
                 throw new DependencyResolutionException("Cannot resolve dependencies of " + project, e);
             }
-
-            cache.update(newState, environment);
+            if (cache != null) {
+                cache.update(newState, environment);
+            }
         } else {
             Set<String> missing = new HashSet<String>();
             newState = cache.getState(environment, availableUnits, missing);
