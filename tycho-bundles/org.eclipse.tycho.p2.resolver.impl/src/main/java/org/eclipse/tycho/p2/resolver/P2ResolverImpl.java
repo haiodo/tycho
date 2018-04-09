@@ -22,6 +22,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicLong;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.equinox.p2.metadata.IArtifactKey;
@@ -109,6 +115,9 @@ public class P2ResolverImpl implements P2Resolver {
             addDependenciesForTests();
         }
 
+        AtomicBoolean useAsync = new AtomicBoolean(
+                (environments.size() > 1) && ResolutionCacheConfig.isDoParallelResolve());
+
         ArrayList<P2ResolutionResult> results = new ArrayList<>();
         usedTargetPlatformUnits = new LinkedHashSet<>();
 
@@ -117,15 +126,65 @@ public class P2ResolverImpl implements P2Resolver {
                         ProjectorResolutionStrategy.class.getName(), additionalRequirementsData)
                 : null;
 
-        long st = System.currentTimeMillis();
+        if (useAsync.get()) {
+            long st = System.currentTimeMillis();
+            AtomicLong totalTime = new AtomicLong(0);
 
-        for (TargetEnvironment environment : environments) {
-            boolean lastEnvironment = results.size() == environments.size() - 1;
-            results.add(resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment, cache,
-                    lastEnvironment));
+            List<CompletableFuture<Void>> futures = new ArrayList<>(environments.size());
+
+            for (int i = 0; i < environments.size(); i++) {
+                results.add(null);
+            }
+
+            int pos = 0;
+            for (TargetEnvironment environment : environments) {
+                int fpos = pos;
+                futures.add(CompletableFuture.runAsync(() -> {
+                    long sst = System.currentTimeMillis();
+                    P2ResolutionResult resolutionResult = resolveDependencies(project,
+                            new ProjectorResolutionStrategy(logger), environment, cache, false);
+                    synchronized (results) {
+                        results.set(fpos, resolutionResult);
+                    }
+                    long eed = System.currentTimeMillis();
+                    totalTime.addAndGet(eed - sst);
+                }));
+                pos++;
+            }
+
+            try {
+                CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).exceptionally((ex) -> {
+                    logger.error("Failed to resolved target plarform in parallel mode, rollack to synchronous mode:"
+                            + ex.getMessage());
+                    ex.printStackTrace();
+                    useAsync.set(false);
+                    return null;
+                }).get(10, TimeUnit.MINUTES);
+            } catch (InterruptedException | ExecutionException | TimeoutException e) {
+                logger.error("Failed to resolved target plarform in parallel mode, rollack to synchronous mode: "
+                        + e.getMessage());
+                e.printStackTrace();
+
+                useAsync.set(false);
+            }
+            context.saveLocalMavenRepository();
+            long ed = System.currentTimeMillis();
+
+            logger.info("Resolve time: " + (ed - st) + " Total resolve time: " + totalTime.get());
         }
-        long ed = System.currentTimeMillis();
-        logger.info("Resolve time: " + (ed - st));
+
+        if (!useAsync.get()) {
+            long st = System.currentTimeMillis();
+
+            for (TargetEnvironment environment : environments) {
+                boolean lastEnvironment = results.size() == environments.size() - 1;
+                results.add(resolveDependencies(project, new ProjectorResolutionStrategy(logger), environment, cache,
+                        lastEnvironment));
+            }
+            long ed = System.currentTimeMillis();
+            logger.info("Resolve time: " + (ed - st));
+
+        }
 
         if (cache != null) {
             cache.save();
@@ -268,7 +327,9 @@ public class P2ResolverImpl implements P2Resolver {
         }
 
         if (usedTargetPlatformUnits != null) {
-            usedTargetPlatformUnits.addAll(newState);
+            synchronized (usedTargetPlatformUnits) {
+                usedTargetPlatformUnits.addAll(newState);
+            }
         }
 
         P2ResolutionResult result = toResolutionResult(newState, project, saveMavenRepository);

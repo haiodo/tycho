@@ -68,7 +68,7 @@ public class ResolutionProjectCache {
     private boolean loaded;
     private String extraHash;
 
-    public void update(Collection<IInstallableUnit> newState, TargetEnvironment environment) {
+    public synchronized void update(Collection<IInstallableUnit> newState, TargetEnvironment environment) {
 
         addEnvironment(environment);
 
@@ -226,12 +226,12 @@ public class ResolutionProjectCache {
         return entry;
     }
 
-    public boolean isAvailabble(TargetEnvironment environment) {
+    public synchronized boolean isAvailabble(TargetEnvironment environment) {
         return loaded && this.envs.containsValue(environment);
     }
 
-    public Collection<IInstallableUnit> getState(TargetEnvironment environment, Set<IInstallableUnit> availableUnits,
-            Set<String> missing) {
+    public synchronized Collection<IInstallableUnit> getState(TargetEnvironment environment,
+            Set<IInstallableUnit> availableUnits, Set<String> missing) {
 
         if (!loaded || !this.envs.containsValue(environment)) {
             return null;
@@ -270,12 +270,10 @@ public class ResolutionProjectCache {
         return newState;
     }
 
-    public void save() {
-        if (loaded) {
-            return;
-        }
-        //
+    public synchronized void save() {
+        if (!loaded || ResolutionCacheConfig.isDoResave()) {
 
+        }
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -293,7 +291,12 @@ public class ResolutionProjectCache {
 
             Set<TargetEnvironment> allEnvs = new HashSet<>(this.envs.values());
 
-            for (Map.Entry<String, TargetEnvironment> env : this.envs.entrySet()) {
+            List<Map.Entry<String, TargetEnvironment>> entrys = new ArrayList<>();
+            entrys.addAll(this.envs.entrySet());
+
+            entrys.sort((a, b) -> a.getKey().compareTo(b.getKey()));
+
+            for (Map.Entry<String, TargetEnvironment> env : entrys) {
 
                 Element pl = document.createElement(PLATFORM_ELEMENT);
                 platforms.appendChild(pl);
@@ -312,7 +315,12 @@ public class ResolutionProjectCache {
                 revMap.put(ple.getValue(), ple.getKey());
             }
 
-            for (Entry ee : entries.values()) {
+            List<Entry> entryList = new ArrayList<>();
+            entryList.addAll(entries.values());
+
+            entryList.sort((a, b) -> a.name.compareTo(b.name));
+
+            for (Entry ee : entryList) {
                 Element el = document.createElement(DEPENDENCY_ELEMENT);
                 deps.appendChild(el);
 

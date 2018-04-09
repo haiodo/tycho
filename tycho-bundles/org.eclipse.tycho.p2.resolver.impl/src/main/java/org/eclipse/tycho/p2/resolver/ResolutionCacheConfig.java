@@ -21,4 +21,12 @@ public class ResolutionCacheConfig {
         return false;
     }
 
+    public static boolean isDoResave() {
+        return "true".equals(System.getProperty("tycho.precache.resave"));
+    }
+
+    public static boolean isDoParallelResolve() {
+        return !"false".equals(System.getProperty("tycho.resolve.parallel"));
+    }
+
 }

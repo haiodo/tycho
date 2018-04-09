@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='org.eclipse.tycho.surefire.junit4' version='1.2.0.han2'>
+    <update id='org.eclipse.tycho.surefire.junit4' range='[0.0.0,1.2.0.han2)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='Tycho Surefire OSGi JUnit4 Runner'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='maven-groupId' value='org.eclipse.tycho'/>
+      <property name='maven-artifactId' value='org.eclipse.tycho.surefire.junit4'/>
+      <property name='maven-version' value='1.2.0.han2'/>
+    </properties>
+    <provides size='4'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.tycho.surefire.junit4' version='1.2.0.han2'/>
+      <provided namespace='osgi.bundle' name='org.eclipse.tycho.surefire.junit4' version='1.2.0.han2'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='osgi.fragment' name='org.eclipse.tycho.surefire.osgibooter' version='1.2.0.han2'/>
+    </provides>
+    <requires size='6'>
+      <required namespace='osgi.bundle' name='org.eclipse.tycho.surefire.osgibooter' range='0.14.0'/>
+      <required namespace='java.package' name='junit.framework' range='3.0.0'/>
+      <required namespace='java.package' name='org.junit' range='4.0.0'/>
+      <required namespace='java.package' name='org.junit.runner' range='4.0.0'/>
+      <required namespace='java.package' name='org.junit.runner.notification' range='4.0.0'/>
+      <required namespace='java.package' name='org.junit.runner.manipulation' range='4.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='org.eclipse.tycho.surefire.junit4' version='1.2.0.han2'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: org.eclipse.tycho.surefire.junit4;singleton:=true&#xA;Bundle-Version: 1.2.0.han2&#xA;Fragment-Host: org.eclipse.tycho.surefire.osgibooter;bundle-version=&quot;0.14.0&quot;&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
