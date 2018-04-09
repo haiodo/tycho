@@ -10,10 +10,15 @@
  *******************************************************************************/
 package org.eclipse.tycho.buildversion;
 
+import java.io.File;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
+import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
 import org.eclipse.tycho.ArtifactDescriptor;
 import org.eclipse.tycho.ReactorProject;
 import org.eclipse.tycho.core.ArtifactDependencyVisitor;
@@ -21,12 +26,10 @@ import org.eclipse.tycho.core.FeatureDescription;
 import org.eclipse.tycho.core.PluginDescription;
 import org.eclipse.tycho.core.TychoProject;
 import org.eclipse.tycho.core.osgitools.DefaultReactorProject;
-
+import org.eclipse.tycho.model.Feature;
+import org.eclipse.tycho.model.FeatureRef;
+import org.eclipse.tycho.model.PluginRef;
 import org.osgi.framework.Version;
-
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
 
 /**
  * <p>
@@ -92,6 +95,41 @@ public class BuildQualifierAggregatorMojo extends BuildQualifierMojo {
                     return;
                 }
                 visitArtifact(plugin);
+            }
+
+            public boolean isUseProjectCache() {
+                String cacheDir = System.getProperty("tycho.precache.dir");
+                return cacheDir != null;
+            }
+
+            @Override
+            public void missingArtifact(File location, Feature feature, FeatureRef featureRef) {
+                if (isUseProjectCache()) {
+                    getLog().warn("Could not resolve artifact: " + location.toString()
+                            + " During build qualifier calculation");
+                } else {
+                    super.missingArtifact(location, feature, featureRef);
+                }
+            }
+
+            @Override
+            public void missingFeature(FeatureRef ref, List<ArtifactDescriptor> walkback) {
+                if (isUseProjectCache()) {
+                    getLog().warn(
+                            "Could not resolve feature: " + ref.toString() + " During build qualifier calculation");
+                } else {
+                    super.missingFeature(ref, walkback);
+                }
+            }
+
+            @Override
+            public void missingPlugin(PluginRef ref, List<ArtifactDescriptor> walkback) {
+                if (isUseProjectCache()) {
+                    getLog().warn(
+                            "Could not resolve feature: " + ref.toString() + " During build qualifier calculation");
+                } else {
+                    super.missingPlugin(ref, walkback);
+                }
             }
 
             private void visitArtifact(ArtifactDescriptor artifact) {

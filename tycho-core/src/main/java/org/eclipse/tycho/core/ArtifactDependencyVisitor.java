@@ -10,9 +10,11 @@
  *******************************************************************************/
 package org.eclipse.tycho.core;
 
+import java.io.File;
 import java.util.List;
 
 import org.eclipse.tycho.ArtifactDescriptor;
+import org.eclipse.tycho.model.Feature;
 import org.eclipse.tycho.model.FeatureRef;
 import org.eclipse.tycho.model.PluginRef;
 
@@ -40,5 +42,10 @@ public abstract class ArtifactDependencyVisitor {
             sb.append("  ").append(artifact.toString()).append("\n");
         }
         return new RuntimeException(sb.toString());
+    }
+
+    public void missingArtifact(File location, Feature feature, FeatureRef featureRef) {
+        throw new IllegalStateException("Feature " + location + " with id " + feature.getId()
+                + " is not part of the project build target platform");
     }
 }
