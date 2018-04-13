@@ -154,6 +154,10 @@ public class P2ResolverImpl implements P2Resolver {
 
             try {
                 CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).exceptionally((ex) -> {
+                    // We need to cancel all features running now.
+                    for (CompletableFuture<Void> f : futures) {
+                        f.cancel(true);
+                    }
                     logger.error("Failed to resolved target plarform in parallel mode, rollack to synchronous mode:"
                             + ex.getMessage());
                     ex.printStackTrace();

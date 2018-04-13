@@ -25,4 +25,4 @@ Please following in your pom.xml to try this enhancements.
 </pluginRepositories> 
 ```
 
-And specify tycho version 1.2.0.han
+And specify tycho version 1.2.0.han2
