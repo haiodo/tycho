@@ -24,7 +24,7 @@ public class RequireBundleTest extends AbstractTychoIntegrationTest {
     public void loadResourceFromRequireBundle() throws Exception {
         Verifier verifier = getVerifier("/surefire.requireBundle", false, true);
         Properties props = verifier.getSystemProperties();
-        props.setProperty("oxygen-repo", P2Repositories.ECLIPSE_OXYGEN.toString());
+        props.setProperty("oxygen-repo", P2Repositories.ECLIPSE_KEPLER.toString());
         verifier.executeGoal("integration-test");
         verifier.verifyErrorFreeLog();
     }

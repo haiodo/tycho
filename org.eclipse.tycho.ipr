@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="org.eclipse.tycho.core.shared" />
+        <module name="org.eclipse.tycho.core.shared.tests" />
+        <module name="org.eclipse.tycho.embedder.shared" />
+        <module name="org.eclipse.tycho.noopsecurity" />
+        <module name="org.eclipse.tycho.p2.maven.repository" />
+        <module name="org.eclipse.tycho.p2.maven.repository.tests" />
+        <module name="org.eclipse.tycho.p2.resolver.impl" />
+        <module name="org.eclipse.tycho.p2.resolver.impl.test" />
+        <module name="org.eclipse.tycho.p2.resolver.shared" />
+        <module name="org.eclipse.tycho.p2.resolver.shared.tests" />
+        <module name="org.eclipse.tycho.p2.tools.impl" />
+        <module name="org.eclipse.tycho.p2.tools.shared" />
+        <module name="org.eclipse.tycho.p2.tools.tests" />
+        <module name="org.eclipse.tycho.surefire.junit" />
+        <module name="org.eclipse.tycho.surefire.junit4" />
+        <module name="org.eclipse.tycho.surefire.junit47" />
+        <module name="org.eclipse.tycho.surefire.osgibooter" />
+        <module name="org.eclipse.tycho.surefire.testng" />
+        <module name="org.eclipse.tycho.test.utils" />
+        <module name="sisu-equinox-api" />
+        <module name="sisu-equinox-embedder" />
+        <module name="sisu-equinox-launching" />
+        <module name="target-platform-configuration" />
+        <module name="tycho-artifactcomparator" />
+        <module name="tycho-bundles-external" />
+        <module name="tycho-bundles-target" />
+        <module name="tycho-compiler-jdt" />
+        <module name="tycho-compiler-plugin" />
+        <module name="tycho-core" />
+        <module name="tycho-embedder-api" />
+        <module name="tycho-lib-detector" />
+        <module name="tycho-maven-plugin" />
+        <module name="tycho-metadata-model" />
+        <module name="tycho-p2-director-plugin" />
+        <module name="tycho-p2-facade" />
+        <module name="tycho-p2-plugin" />
+        <module name="tycho-p2-publisher-plugin" />
+        <module name="tycho-p2-repository-plugin" />
+        <module name="tycho-packaging-plugin" />
+        <module name="tycho-pomgenerator-plugin" />
+        <module name="tycho-source-plugin" />
+        <module name="tycho-standalone-p2-director" />
+        <module name="tycho-surefire-plugin" />
+        <module name="tycho-testing-harness" />
+        <module name="tycho-versions-plugin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="org.eclipse.tycho.core.shared" target="1.5" />
+      <module name="org.eclipse.tycho.core.shared.tests" target="1.5" />
+      <module name="org.eclipse.tycho.embedder.shared" target="1.5" />
+      <module name="org.eclipse.tycho.noopsecurity" target="1.5" />
+      <module name="org.eclipse.tycho.p2.maven.repository" target="1.5" />
+      <module name="org.eclipse.tycho.p2.maven.repository.tests" target="1.5" />
+      <module name="org.eclipse.tycho.p2.resolver.impl" target="8" />
+      <module name="org.eclipse.tycho.p2.resolver.impl.test" target="1.5" />
+      <module name="org.eclipse.tycho.p2.resolver.shared" target="1.5" />
+      <module name="org.eclipse.tycho.p2.resolver.shared.tests" target="1.5" />
+      <module name="org.eclipse.tycho.p2.tools.impl" target="1.5" />
+      <module name="org.eclipse.tycho.p2.tools.shared" target="1.5" />
+      <module name="org.eclipse.tycho.p2.tools.tests" target="1.5" />
+      <module name="org.eclipse.tycho.surefire.junit" target="1.8" />
+      <module name="org.eclipse.tycho.surefire.junit4" target="1.8" />
+      <module name="org.eclipse.tycho.surefire.junit47" target="1.8" />
+      <module name="org.eclipse.tycho.surefire.osgibooter" target="1.5" />
+      <module name="org.eclipse.tycho.surefire.testng" target="1.8" />
+      <module name="org.eclipse.tycho.test.utils" target="1.7" />
+      <module name="sisu-equinox" target="1.5" />
+      <module name="sisu-equinox-api" target="1.8" />
+      <module name="sisu-equinox-embedder" target="1.8" />
+      <module name="sisu-equinox-launching" target="1.8" />
+      <module name="target-platform-configuration" target="1.8" />
+      <module name="tycho" target="1.5" />
+      <module name="tycho-artifactcomparator" target="1.8" />
+      <module name="tycho-bundles" target="1.5" />
+      <module name="tycho-bundles-external" target="1.5" />
+      <module name="tycho-bundles-target" target="1.5" />
+      <module name="tycho-compiler-jdt" target="1.8" />
+      <module name="tycho-compiler-plugin" target="1.8" />
+      <module name="tycho-core" target="1.8" />
+      <module name="tycho-embedder-api" target="1.8" />
+      <module name="tycho-lib-detector" target="1.1" />
+      <module name="tycho-maven-plugin" target="1.8" />
+      <module name="tycho-metadata-model" target="1.8" />
+      <module name="tycho-p2" target="1.5" />
+      <module name="tycho-p2-director-plugin" target="1.8" />
+      <module name="tycho-p2-facade" target="1.8" />
+      <module name="tycho-p2-plugin" target="1.8" />
+      <module name="tycho-p2-publisher-plugin" target="1.8" />
+      <module name="tycho-p2-repository-plugin" target="1.8" />
+      <module name="tycho-packaging-plugin" target="1.8" />
+      <module name="tycho-pomgenerator-plugin" target="1.8" />
+      <module name="tycho-release" target="1.5" />
+      <module name="tycho-source-plugin" target="1.8" />
+      <module name="tycho-standalone-p2-director" target="1.5" />
+      <module name="tycho-surefire" target="1.5" />
+      <module name="tycho-surefire-plugin" target="1.8" />
+      <module name="tycho-testing-harness" target="1.8" />
+      <module name="tycho-versions-plugin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sisu-equinox" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-embedder" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-launching" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/target-platform-configuration" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-artifactcomparator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared.tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.embedder.shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.noopsecurity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository.tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl.test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared.tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.shared" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.tests" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.test.utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/tycho-bundles-external" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/tycho-bundles-target" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-bundles/tycho-standalone-p2-director" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-compiler-jdt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-compiler-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-embedder-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-lib-detector" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-maven-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-metadata-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2/tycho-p2-director-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2/tycho-p2-facade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2/tycho-p2-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2/tycho-p2-publisher-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-p2/tycho-p2-repository-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-packaging-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-pomgenerator-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-release" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-release/tycho-versions-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-source-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/tycho-surefire-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-testing-harness" charset="UTF-8" />
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0" is_locked="false">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared/org.eclipse.tycho.core.shared.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared/org.eclipse.tycho.core.shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared.tests/org.eclipse.tycho.core.shared.tests.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.core.shared.tests/org.eclipse.tycho.core.shared.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.embedder.shared/org.eclipse.tycho.embedder.shared.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.embedder.shared/org.eclipse.tycho.embedder.shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.noopsecurity/org.eclipse.tycho.noopsecurity.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.noopsecurity/org.eclipse.tycho.noopsecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository/org.eclipse.tycho.p2.maven.repository.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository/org.eclipse.tycho.p2.maven.repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository.tests/org.eclipse.tycho.p2.maven.repository.tests.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.maven.repository.tests/org.eclipse.tycho.p2.maven.repository.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/org.eclipse.tycho.p2.resolver.impl.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/org.eclipse.tycho.p2.resolver.impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl.test/org.eclipse.tycho.p2.resolver.impl.test.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl.test/org.eclipse.tycho.p2.resolver.impl.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared/org.eclipse.tycho.p2.resolver.shared.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared/org.eclipse.tycho.p2.resolver.shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared.tests/org.eclipse.tycho.p2.resolver.shared.tests.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.shared.tests/org.eclipse.tycho.p2.resolver.shared.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.impl/org.eclipse.tycho.p2.tools.impl.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.impl/org.eclipse.tycho.p2.tools.impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.shared/org.eclipse.tycho.p2.tools.shared.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.shared/org.eclipse.tycho.p2.tools.shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.tests/org.eclipse.tycho.p2.tools.tests.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.tests/org.eclipse.tycho.p2.tools.tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit/org.eclipse.tycho.surefire.junit.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit/org.eclipse.tycho.surefire.junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4/org.eclipse.tycho.surefire.junit4.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4/org.eclipse.tycho.surefire.junit4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47/org.eclipse.tycho.surefire.junit47.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47/org.eclipse.tycho.surefire.junit47.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter/org.eclipse.tycho.surefire.osgibooter.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter/org.eclipse.tycho.surefire.osgibooter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng/org.eclipse.tycho.surefire.testng.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng/org.eclipse.tycho.surefire.testng.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.test.utils/org.eclipse.tycho.test.utils.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.test.utils/org.eclipse.tycho.test.utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox.iml" filepath="$PROJECT_DIR$/sisu-equinox/sisu-equinox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-api/sisu-equinox-api.iml" filepath="$PROJECT_DIR$/sisu-equinox/sisu-equinox-api/sisu-equinox-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-embedder/sisu-equinox-embedder.iml" filepath="$PROJECT_DIR$/sisu-equinox/sisu-equinox-embedder/sisu-equinox-embedder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sisu-equinox/sisu-equinox-launching/sisu-equinox-launching.iml" filepath="$PROJECT_DIR$/sisu-equinox/sisu-equinox-launching/sisu-equinox-launching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/target-platform-configuration/target-platform-configuration.iml" filepath="$PROJECT_DIR$/target-platform-configuration/target-platform-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho.iml" filepath="$PROJECT_DIR$/tycho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-artifactcomparator/tycho-artifactcomparator.iml" filepath="$PROJECT_DIR$/tycho-artifactcomparator/tycho-artifactcomparator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/tycho-bundles.iml" filepath="$PROJECT_DIR$/tycho-bundles/tycho-bundles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/tycho-bundles-external/tycho-bundles-external.iml" filepath="$PROJECT_DIR$/tycho-bundles/tycho-bundles-external/tycho-bundles-external.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/tycho-bundles-target/tycho-bundles-target.iml" filepath="$PROJECT_DIR$/tycho-bundles/tycho-bundles-target/tycho-bundles-target.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-compiler-jdt/tycho-compiler-jdt.iml" filepath="$PROJECT_DIR$/tycho-compiler-jdt/tycho-compiler-jdt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-compiler-plugin/tycho-compiler-plugin.iml" filepath="$PROJECT_DIR$/tycho-compiler-plugin/tycho-compiler-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-core/tycho-core.iml" filepath="$PROJECT_DIR$/tycho-core/tycho-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-embedder-api/tycho-embedder-api.iml" filepath="$PROJECT_DIR$/tycho-embedder-api/tycho-embedder-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-lib-detector/tycho-lib-detector.iml" filepath="$PROJECT_DIR$/tycho-lib-detector/tycho-lib-detector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-maven-plugin/tycho-maven-plugin.iml" filepath="$PROJECT_DIR$/tycho-maven-plugin/tycho-maven-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-metadata-model/tycho-metadata-model.iml" filepath="$PROJECT_DIR$/tycho-metadata-model/tycho-metadata-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2-director-plugin/tycho-p2-director-plugin.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2-director-plugin/tycho-p2-director-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2-facade/tycho-p2-facade.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2-facade/tycho-p2-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2-plugin/tycho-p2-plugin.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2-plugin/tycho-p2-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2-publisher-plugin/tycho-p2-publisher-plugin.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2-publisher-plugin/tycho-p2-publisher-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-p2/tycho-p2-repository-plugin/tycho-p2-repository-plugin.iml" filepath="$PROJECT_DIR$/tycho-p2/tycho-p2-repository-plugin/tycho-p2-repository-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-packaging-plugin/tycho-packaging-plugin.iml" filepath="$PROJECT_DIR$/tycho-packaging-plugin/tycho-packaging-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-pomgenerator-plugin/tycho-pomgenerator-plugin.iml" filepath="$PROJECT_DIR$/tycho-pomgenerator-plugin/tycho-pomgenerator-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-release/tycho-release.iml" filepath="$PROJECT_DIR$/tycho-release/tycho-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-source-plugin/tycho-source-plugin.iml" filepath="$PROJECT_DIR$/tycho-source-plugin/tycho-source-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-bundles/tycho-standalone-p2-director/tycho-standalone-p2-director.iml" filepath="$PROJECT_DIR$/tycho-bundles/tycho-standalone-p2-director/tycho-standalone-p2-director.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/tycho-surefire.iml" filepath="$PROJECT_DIR$/tycho-surefire/tycho-surefire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/tycho-surefire-plugin/tycho-surefire-plugin.iml" filepath="$PROJECT_DIR$/tycho-surefire/tycho-surefire-plugin/tycho-surefire-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-testing-harness/tycho-testing-harness.iml" filepath="$PROJECT_DIR$/tycho-testing-harness/tycho-testing-harness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-release/tycho-versions-plugin/tycho-versions-plugin.iml" filepath="$PROJECT_DIR$/tycho-release/tycho-versions-plugin/tycho-versions-plugin.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+  <component name="libraryTable">
+    <library name="Maven: backport-util-concurrent:backport-util-concurrent:3.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: bcel:bcel:5.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/bcel/bcel/5.1/bcel-5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/bcel/bcel/5.1/bcel-5.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/bcel/bcel/5.1/bcel-5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.code.findbugs:jsr305:2.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.google.collections:google-collections:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/collections/google-collections/1.0/google-collections-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/collections/google-collections/1.0/google-collections-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/collections/google-collections/1.0/google-collections-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.thoughtworks.qdox:qdox:2.0-M7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/qdox/qdox/2.0-M7/qdox-2.0-M7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/qdox/qdox/2.0-M7/qdox-2.0-M7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/qdox/qdox/2.0-M7/qdox-2.0-M7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-io:commons-io:2.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.5/commons-io-2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.5/commons-io-2.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.5/commons-io-2.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: de.pdark:decentxml:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/de/pdark/decentxml/1.3/decentxml-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/de/pdark/decentxml/1.3/decentxml-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/de/pdark/decentxml/1.3/decentxml-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: junit:junit:4.11">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-compress:1.15">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-compress:sources:1.15">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15-sources.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.15/commons-compress-1.15-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-exec:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-exec/1.2/commons-exec-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-exec/1.2/commons-exec-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-exec/1.2/commons-exec-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.commons:commons-lang3:3.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.plugin-testing:maven-plugin-testing-harness:2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-testing/maven-plugin-testing-harness/2.1/maven-plugin-testing-harness-2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.plugin-tools:maven-plugin-annotations:3.5.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5.2/maven-plugin-annotations-3.5.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5.2/maven-plugin-annotations-3.5.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugin-tools/maven-plugin-annotations/3.5.2/maven-plugin-annotations-3.5.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.plugins:maven-source-plugin:maven-plugin:2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-source-plugin/2.1/maven-source-plugin-2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-source-plugin/2.1/maven-source-plugin-2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-source-plugin/2.1/maven-source-plugin-2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.shared:maven-shared-utils:0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-shared-utils/0.8/maven-shared-utils-0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-shared-utils/0.8/maven-shared-utils-0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-shared-utils/0.8/maven-shared-utils-0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.shared:maven-verifier:1.6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-verifier/1.6/maven-verifier-1.6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-verifier/1.6/maven-verifier-1.6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-verifier/1.6/maven-verifier-1.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.surefire:maven-surefire-common:2.22.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/maven-surefire-common/2.22.0/maven-surefire-common-2.22.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/maven-surefire-common/2.22.0/maven-surefire-common-2.22.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/maven-surefire-common/2.22.0/maven-surefire-common-2.22.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.surefire:surefire-api:2.22.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-api/2.22.0/surefire-api-2.22.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-api/2.22.0/surefire-api-2.22.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-api/2.22.0/surefire-api-2.22.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.surefire:surefire-booter:2.22.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-booter/2.22.0/surefire-booter-2.22.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-booter/2.22.0/surefire-booter-2.22.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-booter/2.22.0/surefire-booter-2.22.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.surefire:surefire-logger-api:2.22.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-logger-api/2.22.0/surefire-logger-api-2.22.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-logger-api/2.22.0/surefire-logger-api-2.22.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/surefire/surefire-logger-api/2.22.0/surefire-logger-api-2.22.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven.wagon:wagon-provider-api:1.0-beta-6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-aether-provider:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-archiver:2.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-artifact-manager:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-artifact:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-compat:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-compat/3.0/maven-compat-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-compat/3.0/maven-compat-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-compat/3.0/maven-compat-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-core:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/3.0/maven-core-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/3.0/maven-core-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/3.0/maven-core-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-model-builder:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-model:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-plugin-api:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-plugin-descriptor:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-plugin-registry:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-profile:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-project:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-repository-metadata:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-settings-builder:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-settings:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings/3.0/maven-settings-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings/3.0/maven-settings-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.maven:maven-toolchain:2.2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-toolchain/2.2.1/maven-toolchain-2.2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-toolchain/2.2.1/maven-toolchain-2.2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-toolchain/2.2.1/maven-toolchain-2.2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.xbean:xbean-reflect:3.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/xbean/xbean-reflect/3.7/xbean-reflect-3.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-archiver:3.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-archiver/3.4/plexus-archiver-3.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-archiver/3.4/plexus-archiver-3.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-archiver/3.4/plexus-archiver-3.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-classworlds:2.2.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-classworlds:2.5.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.5.1/plexus-classworlds-2.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.5.1/plexus-classworlds-2.5.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-classworlds/2.5.1/plexus-classworlds-2.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-compiler-api:2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-compiler-manager:2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-component-annotations:1.7.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-container-default:1.7.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-container-default/1.7.1/plexus-container-default-1.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-container-default/1.7.1/plexus-container-default-1.7.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-container-default/1.7.1/plexus-container-default-1.7.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-interpolation:1.14">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-io:2.7.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-io/2.7.1/plexus-io-2.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-io/2.7.1/plexus-io-2.7.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-io/2.7.1/plexus-io-2.7.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-java:0.9.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-java/0.9.8/plexus-java-0.9.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-java/0.9.8/plexus-java-0.9.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-java/0.9.8/plexus-java-0.9.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.plexus:plexus-utils:3.0.24">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-utils/3.0.24/plexus-utils-3.0.24.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-utils/3.0.24/plexus-utils-3.0.24-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-utils/3.0.24/plexus-utils-3.0.24-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.jdt:ecj:3.17.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/ecj/3.17.0/ecj-3.17.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/ecj/3.17.0/ecj-3.17.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/ecj/3.17.0/ecj-3.17.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.platform:org.eclipse.osgi.compatibility.state:1.1.400">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi.compatibility.state/1.1.400/org.eclipse.osgi.compatibility.state-1.1.400.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi.compatibility.state/1.1.400/org.eclipse.osgi.compatibility.state-1.1.400-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi.compatibility.state/1.1.400/org.eclipse.osgi.compatibility.state-1.1.400-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.platform:org.eclipse.osgi:3.13.300">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi/3.13.300/org.eclipse.osgi-3.13.300.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi/3.13.300/org.eclipse.osgi-3.13.300-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/platform/org.eclipse.osgi/3.13.300/org.eclipse.osgi-3.13.300-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.iq80.snappy:snappy:0.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/iq80/snappy/snappy/0.4/snappy-0.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/iq80/snappy/snappy/0.4/snappy-0.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/iq80/snappy/snappy/0.4/snappy-0.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.mockito:mockito-core:1.8.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.8.4/mockito-core-1.8.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.8.4/mockito-core-1.8.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/1.8.4/mockito-core-1.8.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.objenesis:objenesis:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/1.0/objenesis-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/1.0/objenesis-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/1.0/objenesis-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.objenesis:objenesis:2.6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ow2.asm:asm-analysis:7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.0/asm-analysis-7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.0/asm-analysis-7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.0/asm-analysis-7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ow2.asm:asm-tree:7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-tree/7.0/asm-tree-7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-tree/7.0/asm-tree-7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-tree/7.0/asm-tree-7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ow2.asm:asm-util:7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.0/asm-util-7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.0/asm-util-7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.0/asm-util-7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ow2.asm:asm:6.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/6.1.1/asm-6.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/6.1.1/asm-6.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/6.1.1/asm-6.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.ow2.asm:asm:7.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.0/asm-7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.0/asm-7.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.0/asm-7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.aether:aether-api:1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-api/1.7/aether-api-1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-api/1.7/aether-api-1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.aether:aether-impl:1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.aether:aether-spi:1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.aether:aether-util:1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-util/1.7/aether-util-1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/aether/aether-util/1.7/aether-util-1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.plexus:plexus-cipher:1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.plexus:plexus-sec-dispatcher:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.sisu:sisu-guice:noaop:2.1.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.sisu:sisu-inject-bean:1.4.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.sonatype.sisu:sisu-inject-plexus:1.4.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.tukaani:xz:1.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/tukaani/xz/1.5/xz-1.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/tukaani/xz/1.5/xz-1.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/tukaani/xz/1.5/xz-1.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: regexp:regexp:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/regexp/regexp/1.2/regexp-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/regexp/regexp/1.2/regexp-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/regexp/regexp/1.2/regexp-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</project>

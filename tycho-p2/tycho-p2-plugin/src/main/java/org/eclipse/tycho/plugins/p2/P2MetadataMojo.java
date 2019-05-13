@@ -154,15 +154,13 @@ public class P2MetadataMojo extends AbstractMojo {
 
             P2Generator p2generator = getService(P2Generator.class);
             synchronized (p2generator) {
-                Map<String, IP2Artifact> generatedMetadata = p2generator.generateMetadata(artifacts, targetDir);
+                Map<String, IP2Artifact> generatedMetadata = p2generator.generateMetadata(artifacts,
+                        new PublisherOptions(generateDownloadStatsProperty), targetDir);
 
-            Map<String, IP2Artifact> generatedMetadata = p2generator.generateMetadata(artifacts,
-                    new PublisherOptions(generateDownloadStatsProperty), targetDir);
-
-            if (baselineMode != BaselineMode.disable) {
-                generatedMetadata = baselineValidator.validateAndReplace(project, execution, generatedMetadata,
-                        baselineRepositories, baselineMode, baselineReplace);
-            }
+                if (baselineMode != BaselineMode.disable) {
+                    generatedMetadata = baselineValidator.validateAndReplace(project, execution, generatedMetadata,
+                            baselineRepositories, baselineMode, baselineReplace);
+                }
 
                 File contentsXml = new File(targetDir, FILE_NAME_P2_METADATA);
                 File artifactsXml = new File(targetDir, FILE_NAME_P2_ARTIFACTS);
