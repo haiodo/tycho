@@ -22,6 +22,7 @@
         <module name="org.eclipse.tycho.surefire.junit" />
         <module name="org.eclipse.tycho.surefire.junit4" />
         <module name="org.eclipse.tycho.surefire.junit47" />
+        <module name="org.eclipse.tycho.surefire.junit5" />
         <module name="org.eclipse.tycho.surefire.osgibooter" />
         <module name="org.eclipse.tycho.surefire.testng" />
         <module name="org.eclipse.tycho.test.utils" />
@@ -70,6 +71,7 @@
       <module name="org.eclipse.tycho.surefire.junit" target="1.8" />
       <module name="org.eclipse.tycho.surefire.junit4" target="1.8" />
       <module name="org.eclipse.tycho.surefire.junit47" target="1.8" />
+      <module name="org.eclipse.tycho.surefire.junit5" target="1.8" />
       <module name="org.eclipse.tycho.surefire.osgibooter" target="1.5" />
       <module name="org.eclipse.tycho.surefire.testng" target="1.8" />
       <module name="org.eclipse.tycho.test.utils" target="1.7" />
@@ -155,6 +157,7 @@
     <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit5" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tycho-surefire/tycho-surefire-plugin" charset="UTF-8" />
@@ -192,6 +195,7 @@
       <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit/org.eclipse.tycho.surefire.junit.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit/org.eclipse.tycho.surefire.junit.iml" />
       <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4/org.eclipse.tycho.surefire.junit4.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit4/org.eclipse.tycho.surefire.junit4.iml" />
       <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47/org.eclipse.tycho.surefire.junit47.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit47/org.eclipse.tycho.surefire.junit47.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit5/org.eclipse.tycho.surefire.junit5.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit5/org.eclipse.tycho.surefire.junit5.iml" />
       <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter/org.eclipse.tycho.surefire.osgibooter.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.osgibooter/org.eclipse.tycho.surefire.osgibooter.iml" />
       <module fileurl="file://$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng/org.eclipse.tycho.surefire.testng.iml" filepath="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.testng/org.eclipse.tycho.surefire.testng.iml" />
       <module fileurl="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.test.utils/org.eclipse.tycho.test.utils.iml" filepath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.test.utils/org.eclipse.tycho.test.utils.iml" />

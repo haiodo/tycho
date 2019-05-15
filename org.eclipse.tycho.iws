@@ -2,10 +2,210 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f5f4ee2-c193-4220-9839-790c30af3f57" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.shared/src/main/java/org/eclipse/tycho/p2/tools/mirroring/facade/MirrorOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.tools.shared/src/main/java/org/eclipse/tycho/p2/tools/mirroring/facade/MirrorOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/org.eclipse.tycho.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/org.eclipse.tycho.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/target-platform-validation-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-buildtimestamp-jgit/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-custom-bundle-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-document-bundle-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-eclipserun-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-extras/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-p2-extras-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200-impl/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200a-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pack200b-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-pomless/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-source-feature-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-sourceref-jgit/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/extras/tycho-version-bump-plugin/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared.tests/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared.tests/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared.tests/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.core.shared/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.embedder.shared/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.noopsecurity/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository.tests/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository.tests/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository.tests/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.maven.repository/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl.test/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl.test/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl.test/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.impl/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared.tests/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared.tests/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared.tests/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.resolver.shared/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.impl/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.impl/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.impl/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.shared/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.shared/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.shared/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.tests/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.tests/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.p2.tools.tests/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit4/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit4/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit4/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit47/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit47/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.junit47/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.osgibooter/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.osgibooter/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.osgibooter/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.testng/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.testng/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.surefire.testng/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.test.utils/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.test.utils/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/org.eclipse.tycho.test.utils/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-api/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-api/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-api/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-embedder/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-embedder/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-embedder/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-launching/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-launching/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox-launching/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/sisu-equinox/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/target-platform-configuration/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/target-platform-configuration/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/target-platform-configuration/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-artifactcomparator/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-artifactcomparator/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-artifactcomparator/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-external/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-external/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-external/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles-target/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-bundles/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-jdt/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-jdt/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-jdt/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-compiler-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-core/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-core/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-core/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-embedder-api/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-embedder-api/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-embedder-api/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-lib-detector/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-lib-detector/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-lib-detector/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-maven-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-maven-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-maven-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-metadata-model/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-metadata-model/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-metadata-model/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-director-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-director-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-director-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-facade/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-facade/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-facade/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-publisher-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-publisher-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-publisher-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-repository-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-repository-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2-repository-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-p2/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-packaging-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-packaging-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-packaging-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-pomgenerator-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-pomgenerator-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-pomgenerator-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-release/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-release/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-release/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-source-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-source-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-source-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-standalone-p2-director/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-surefire/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-testing-harness/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-testing-harness/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-testing-harness/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-versions-plugin/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-versions-plugin/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho-versions-plugin/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/repository/org/eclipse/tycho/tycho/maven-metadata.xml.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tycho-compiler-plugin/src/main/java/org/eclipse/tycho/compiler/AbstractOsgiCompilerMojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tycho-compiler-plugin/src/main/java/org/eclipse/tycho/compiler/AbstractOsgiCompilerMojo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/tycho-release/target/" />
     <ignored path="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit/target/" />
@@ -58,6 +258,7 @@
     <ignored path="$PROJECT_DIR$/tycho-p2/tycho-p2-plugin/target/" />
     <ignored path="$PROJECT_DIR$/tycho-source-plugin/target/" />
     <ignored path="$PROJECT_DIR$/tycho-packaging-plugin/target/" />
+    <ignored path="$PROJECT_DIR$/tycho-surefire/org.eclipse.tycho.surefire.junit5/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,11 +267,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="P2ResolverImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/src/main/java/org/eclipse/tycho/p2/resolver/P2ResolverImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-260">
+            <state relative-caret-position="420">
               <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
             </state>
           </provider>
@@ -126,7 +327,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,7 +339,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,28 +400,28 @@
     </configuration>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22389127" />
-      <window_info anchor="bottom" id="Statistic" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2267525" />
+      <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -229,7 +430,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/src/main/java/org/eclipse/tycho/p2/resolver/P2ResolverImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
+        <state relative-caret-position="420">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tycho-bundles/org.eclipse.tycho.p2.resolver.impl/src/main/java/org/eclipse/tycho/p2/resolver/P2ResolverImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
           <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
         </state>
       </provider>
