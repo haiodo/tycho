@@ -12,7 +12,7 @@
 	<parent>
 		<artifactId>tycho</artifactId>
 		<groupId>org.eclipse.tycho</groupId>
-		<version>1.4.0</version>
+		<version>1.4.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>tycho-releng</artifactId>
@@ -129,7 +129,7 @@
 							<goal>wget</goal>
 						</goals>
 						<configuration>
-							<url>http://download.eclipse.org/eclipse/downloads/drops4/${ecjVersion}/ecj-${ecjVersion}.jar</url>
+							<url>https://download.eclipse.org/eclipse/downloads/drops4/S-4.12M1-201904110625/download.php?dropFile=ecj-4.12M1.jar</url>
 							<outputDirectory>${project.build.directory}</outputDirectory>
 						</configuration>
 					</execution>
@@ -140,7 +140,7 @@
 							<goal>wget</goal>
 						</goals>
 						<configuration>
-							<url>http://download.eclipse.org/eclipse/downloads/drops4/${ecjVersion}/ecjsrc-${ecjVersion}.jar</url>
+							<url>https://download.eclipse.org/eclipse/downloads/drops4/S-4.12M1-201904110625/download.php?dropFile=ecjsrc-4.12M1.jar</url>
 							<outputDirectory>${project.build.directory}</outputDirectory>
 						</configuration>
 					</execution>

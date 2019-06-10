@@ -291,20 +291,7 @@ public abstract class AbstractOsgiCompilerMojo extends AbstractCompilerMojo
             this.outputJar = jar;
             this.outputJar.getOutputDirectory().mkdirs();
 
-            int retry = 3;
-            while (retry > 0) {
-                try {
-                    super.execute();
-                    break;
-                } catch (copied.org.apache.maven.plugin.CompilationFailureException ex) {
-                    retry--;
-                    if (retry == 0) {
-                        throw ex;
-                    } else {
-                        getLog().info("Retry compile because of error: ", ex);
-                    }
-                }
-            }
+            super.execute();
             doCopyResources();
         }
 
